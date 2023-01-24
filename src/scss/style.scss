@@ -242,8 +242,7 @@ html {
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    // background: #ffffff;
-    // border-radius: 10px;
+    border-radius: 10px;
     margin: auto;
     display: flex;
     padding: 37px 0px;
@@ -284,14 +283,11 @@ html {
     margin: auto;
     padding-top: 50px;
     padding-bottom: 125px;
+    background: linear-gradient(to top, #ffffff, 80%, #f6f6f6);
+}
+.feature__block {
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
-}
-.feature__wrapper {
-    max-width: 1200px;
-    padding: 0px 30px;
-    width: 100%;
 }
 .feature__image {
     max-width: 508px;
@@ -300,6 +296,8 @@ html {
 .feature__text {
     display: flex;
     flex-direction: column;
+    max-width: 40%;
+    margin-left: 20px;
 }
 .feature__title {
     font-weight: 500;
@@ -315,40 +313,117 @@ html {
     line-height: 30px;
     color: #4f5665;
 }
+.feature__list {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.feature__cheked {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+.feature__item {
+    margin-left: 10px;
+    margin-top: -5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4f5665;
+    align-self: center;
+}
 
 // plan
 .plan {
-    width: 100%;
-    background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
-    padding-top: 30px;
-    padding-bottom: 75px;
+    background: linear-gradient(to top, #ffffff, 80%, #f6f6f6);
+    margin: auto;
 }
-.plan__title {
+.plan__title__block {
     padding-top: 80px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+    // width: 100%;
     display: flex;
+    // justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+.plan__title {
     font-weight: 500;
     font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #0b132a;
+    padding-bottom: 10px;
+    max-width: 384px;
 }
 
 .plan__subtitle {
-    padding-top: 80px;
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-weight: 400;
     font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #4f5665;
+    max-width: 555px;
+    padding-top: 10px;
+    width: 100%;
 }
-.plans__cards {
+.plans__cards__block {
     display: flex;
-    margin: auto;
     justify-content: space-between;
     padding: 0px 20px;
 }
-.plans__card-price {
+.plan__card {
+    // width: 330px;
+    // height: 760px;
+    width: 100%;
+    margin: 0px 10px;
+    background: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    padding: 80px 10px 50px;
+}
+.plan__card-pic {
+    align-self: center;
+    width: 145px;
+    height: 165px;
+}
+.plan__card-title {
+    align-self: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #0b132a;
+    margin-top: 30px;
+}
+.plan__card-list__block {
+    align-self: center;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+.plan__card-list {
+    display: flex;
+    margin-top: 10px;
+}
+.plan__card__check-img {
+    align-self: center;
+    width: 13px;
+    height: 9px;
+}
+.plan__card-desc {
+    margin-left: 25px;
+    align-self: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4f5665;
+}
+.plan__card-price {
     align-self: center;
     margin-top: 50px;
     font-weight: 500;
@@ -357,7 +432,7 @@ html {
     text-align: center;
     color: #0b132a;
 }
-.plans__select__button {
+.plan__select__button {
     margin-top: 20px;
     align-self: center;
     max-width: 178px;
@@ -372,9 +447,17 @@ html {
     background: #ffffff;
     transition: 0.5s;
 }
-
+.plan__select__button:hover {
+    color: #ffffff;
+    background: #f53838;
+    -webkit-box-shadow: 0px 20px 20px -16px rgba(245, 56, 56, 1);
+    -moz-box-shadow: 0px 20px 20px -16px rgba(245, 56, 56, 1);
+    box-shadow: 0px 20px 20px -16px rgba(245, 56, 56, 1);
+}
 // map
-
+.map {
+    margin: auto;
+}
 .map__title {
     padding-top: 75px;
     padding-bottom: 78px;
@@ -396,6 +479,7 @@ html {
 }
 // clients
 .clients {
+    margin: auto;
     align-items: center;
 }
 .clients__block {
@@ -444,6 +528,9 @@ html {
     width: 100%;
 }
 // customers
+.customers {
+    margin: auto;
+}
 .customers__cards {
     display: flex;
     justify-content: space-between;
@@ -511,6 +598,10 @@ html {
     width: 85%;
 }
 //buttons
+
+.buttons {
+    margin: auto;
+}
 .buttons__block {
     margin: 0 auto;
     display: flex;
@@ -549,6 +640,7 @@ html {
 // subscribe
 
 .subscribe {
+    margin: auto;
     width: 100%;
     background-color: #f8f8f8;
     display: flex;
@@ -600,6 +692,7 @@ html {
 //footer
 
 .footer {
+    margin: auto;
     width: 100%;
     background-color: #f8f8f8;
 }
