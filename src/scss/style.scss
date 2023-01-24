@@ -1,5 +1,81 @@
 // null
-@import url(null.scss);
+// @import url(null.scss);
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-aadjust: 100%;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
 body {
     font-family: 'Rubik';
 }
@@ -11,6 +87,7 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
 // header
 body {
     background: #f6f6f6;
@@ -19,20 +96,26 @@ body {
     line-height: 1.2;
     font-weight: normal;
 }
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0px 30px;
+    width: 100%;
+}
 .header {
-    background: #ffffff;
+    // background: #ffffff;
     padding-top: 45px;
     padding-bottom: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    // padding: 0px 30px;
 }
 .header__wrapper {
     display: flex;
-    // flex-wrap: wrap;
-    // align-items: flex-end;
-    // justify-content: space-between;
 }
 .header_list {
     display: flex;
@@ -82,7 +165,7 @@ body {
     align-items: center;
     margin-left: 20px;
     max-width: 233px;
-    width: 100%;
+    // width: 100%;
     justify-content: space-between;
 }
 .header__signin {
@@ -115,4 +198,39 @@ body {
     margin: auto;
     padding-top: 45px;
     padding-bottom: 50px;
+    // background-color: #f6f6f6;
+
+}
+.intro__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+    color: #0b132a;
+    margin-bottom: 10px;
+}
+.intro__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4f5665;
+    margin: 10px 0px 25px 0px;
+}
+.intro__button {
+    margin-top: 25px;
+    width: 250px;
+    height: 60px;
+    background: #f53838;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #ffffff;
+    -webkit-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
+    -moz-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
+    box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
+}
+.intro__image {
+    max-width: 60%;
 }
