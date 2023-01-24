@@ -88,31 +88,31 @@ html {
     box-sizing: inherit;
 }
 
-// header
-body {
-    background: #f6f6f6;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 1.2;
-    font-weight: normal;
-}
-
 .wrapper {
+    width: 100%;
+    background: #ffffff;
+    font-family: 'Rubik';
+}
+.block {
     max-width: 1200px;
     padding: 0px 30px;
     width: 100%;
 }
+
+.shadow {
+    -webkit-box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
+    -moz-box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
+    box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
+}
+
+// header
 .header {
-    // background: #ffffff;
     padding-top: 45px;
     padding-bottom: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    width: 100%;
-    max-width: 1200px;
-    // padding: 0px 30px;
 }
 .header__wrapper {
     display: flex;
@@ -122,9 +122,6 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: 0px -5px;
-    li {
-        display: block;
-    }
 }
 .header__item {
     margin-right: 40px;
@@ -165,14 +162,12 @@ body {
     align-items: center;
     margin-left: 20px;
     max-width: 233px;
-    // width: 100%;
     justify-content: space-between;
 }
 .header__signin {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    // width: 54px;
     color: #0b132a;
     margin-right: 5px;
     background-color: transparent;
@@ -198,7 +193,9 @@ body {
     margin: auto;
     padding-top: 45px;
     padding-bottom: 50px;
-    background-color: #f6f6f6;
+}
+.intro__about {
+    max-width: 46%;
 }
 .intro__title {
     font-style: normal;
@@ -235,13 +232,18 @@ body {
 }
 // benefits
 
-.benefits__wrap {
+.benefits {
     margin: auto;
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.benefits__wrap {
     width: 100%;
-    background: #ffffff;
-    border-radius: 10px;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    // background: #ffffff;
+    // border-radius: 10px;
     margin: auto;
     display: flex;
     padding: 37px 0px;
@@ -284,6 +286,7 @@ body {
     padding-bottom: 125px;
     display: flex;
     justify-content: space-between;
+    background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
 }
 .feature__wrapper {
     max-width: 1200px;
@@ -316,7 +319,7 @@ body {
 // plan
 .plan {
     width: 100%;
-    background-color: #fdfdfd;
+    background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
     padding-top: 30px;
     padding-bottom: 75px;
 }
@@ -541,7 +544,7 @@ body {
     display: flex;
 }
 .button__nav {
-    background-color: #f6f6f6;
+    background-color: #ffffff;
 }
 // subscribe
 
@@ -606,7 +609,7 @@ body {
     margin: auto;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: #f6f6f6;
     border-radius: 10px;
     position: relative;
     top: -50%;
@@ -623,6 +626,16 @@ body {
 .footer__logo-link {
     width: 35px;
     height: 35px;
+}
+
+.footer__com_name {
+    width: 104px;
+    height: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0b132a;
+    margin-left: 10px;
 }
 .footer__vpn {
     margin-top: 26px;

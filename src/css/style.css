@@ -101,18 +101,22 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  background: #f6f6f6;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: normal;
+.wrapper {
+  width: 100%;
+  background: #ffffff;
+  font-family: "Rubik";
 }
 
-.wrapper {
+.block {
   max-width: 1200px;
   padding: 0px 30px;
   width: 100%;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
+  -moz-box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
+  box-shadow: 0px 64px 23px -32px rgba(13, 16, 37, 0.05);
 }
 
 .header {
@@ -122,8 +126,6 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  width: 100%;
-  max-width: 1200px;
 }
 
 .header__wrapper {
@@ -135,9 +137,6 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0px -5px;
-}
-.header_list li {
-  display: block;
 }
 
 .header__item {
@@ -214,7 +213,10 @@ body {
   margin: auto;
   padding-top: 45px;
   padding-bottom: 50px;
-  background-color: #f6f6f6;
+}
+
+.intro__about {
+  max-width: 46%;
 }
 
 .intro__title {
@@ -254,13 +256,17 @@ body {
   max-width: 60%;
 }
 
-.benefits__wrap {
+.benefits {
   margin: auto;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+.benefits__wrap {
   width: 100%;
-  background: #ffffff;
-  border-radius: 10px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin: auto;
   display: flex;
   padding: 37px 0px;
@@ -307,6 +313,7 @@ body {
   padding-bottom: 125px;
   display: flex;
   justify-content: space-between;
+  background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
 }
 
 .feature__wrapper {
@@ -343,7 +350,7 @@ body {
 
 .plan {
   width: 100%;
-  background-color: #fdfdfd;
+  background: linear-gradient(to top, #ffffff, 20%, #f6f6f6);
   padding-top: 30px;
   padding-bottom: 75px;
 }
@@ -584,7 +591,7 @@ body {
 }
 
 .button__nav {
-  background-color: #f6f6f6;
+  background-color: #ffffff;
 }
 
 .subscribe {
@@ -652,7 +659,7 @@ body {
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
+  background: #f6f6f6;
   border-radius: 10px;
   position: relative;
   top: -50%;
@@ -671,6 +678,16 @@ body {
 .footer__logo-link {
   width: 35px;
   height: 35px;
+}
+
+.footer__com_name {
+  width: 104px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0b132a;
+  margin-left: 10px;
 }
 
 .footer__vpn {
