@@ -261,7 +261,8 @@ html {
 }
 
 .intro__image {
-  max-width: 57%;
+  max-width: 100%;
+  height: auto;
 }
 
 .benefits {
@@ -779,6 +780,8 @@ html {
   background: #ffffff;
   border-radius: 10px;
   padding: 58.5px 70px;
+  z-index: 2;
+  position: relative;
 }
 
 .subscribe__title {
@@ -824,12 +827,13 @@ html {
 .footer {
   margin: auto;
   background-color: #f8f8f8;
-  padding: 64px 170px;
 }
 
 .footer__wrapper {
+  padding: 64px 30px;
   display: flex;
   justify-content: space-between;
+  margin: auto;
 }
 
 .footer__logo-link {
