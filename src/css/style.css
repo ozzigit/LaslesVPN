@@ -253,6 +253,8 @@ html {
 }
 
 .intro__button:hover {
+  color: #ffffff;
+  background: rgba(203, 3, 3, 0.8235294118);
   -webkit-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
   -moz-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
   box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
@@ -346,7 +348,7 @@ html {
 }
 
 .feature__subtitle {
-  margin-top: 25px;
+  margin-top: 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
@@ -564,7 +566,7 @@ html {
 }
 
 .map__subtitle {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 30px;
   text-align: center;
@@ -634,6 +636,7 @@ html {
 }
 
 .customers__cards {
+  margin-left: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -641,7 +644,7 @@ html {
 
 .customer__card {
   width: 400px;
-  height: 240px;
+  height: 230px;
   border: 2px solid #dddddd;
   border-radius: 10px;
   display: flex;
@@ -787,7 +790,7 @@ html {
   display: flex;
   font-weight: 500;
   font-size: 35px;
-  line-height: 40px;
+  line-height: 45px;
   color: #0b132a;
   max-width: 372px;
   width: 100%;
@@ -816,6 +819,8 @@ html {
 }
 
 .subscribe__button:hover {
+  color: #ffffff;
+  background: rgba(203, 3, 3, 0.8235294118);
   -webkit-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
   -moz-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
   box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
@@ -853,6 +858,7 @@ html {
   font-size: 16px;
   line-height: 30px;
   color: #4f5665;
+  margin-bottom: 30px;
 }
 
 .footer__socs {
