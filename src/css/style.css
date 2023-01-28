@@ -938,12 +938,13 @@ img {
     display: flex;
     justify-content: flex-end;
     position: relative;
+    cursor: pointer;
   }
   .burger {
     margin: 13px 0px;
   }
   .burger__close {
-    width: 28px;
+    width: 32px;
     height: 2px;
     background-color: #4f5665;
     transition: 0.5s;
@@ -951,21 +952,23 @@ img {
   }
   .burger__close:before {
     content: "";
-    width: 28px;
+    width: 32px;
     height: 2px;
     background-color: #4f5665;
     transition: 0.5s;
     position: absolute;
-    top: 11px;
+    top: 3px;
+    margin-top: 3px;
   }
   .burger__close:after {
     content: "";
-    width: 28px;
+    width: 32px;
     height: 2px;
     background-color: #4f5665;
     transition: 0.5s;
     position: absolute;
-    top: -11px;
+    top: -6px;
+    margin-bottom: 3px;
   }
   .burger__open {
     width: 28px;
@@ -1007,15 +1010,15 @@ img {
     margin: 0;
     position: fixed;
     top: 0;
-    min-height: 70%;
+    min-height: 30%;
     height: 100%;
     margin-left: -20px;
     background-color: white;
     padding-top: 100px;
     padding-left: 20px;
-    -webkit-box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
-    -moz-box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
-    box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
+    -webkit-box-shadow: 3px 1px 19px 0px rgba(163, 67, 55, 0.6);
+    -moz-box-shadow: 3px 1px 19px 0px rgba(163, 67, 55, 0.6);
+    box-shadow: 3px 1px 19px 0px rgba(163, 67, 55, 0.6);
     z-index: 1000;
   }
   .header__list {
@@ -1266,6 +1269,9 @@ img {
   .clients__block {
     flex-direction: column;
     width: 90%;
+  }
+  .clients__logo {
+    padding-bottom: 15px;
   }
   .benefits__card {
     flex-direction: column;
