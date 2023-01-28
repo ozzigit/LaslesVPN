@@ -134,11 +134,16 @@ img {
   position: relative;
 }
 
-.header_list {
+.header__nav {
+  margin-right: 40px;
+}
+
+.header__list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0px -5px;
+  min-width: 500px;
 }
 
 .header__item {
@@ -155,7 +160,7 @@ img {
 .header__logo {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 55px;
 }
 
 .header__logo-link {
@@ -180,9 +185,10 @@ img {
 
 .header__sign {
   display: flex;
+  align-items: center;
   padding: 0 15px;
-  max-width: 233px;
   justify-content: space-between;
+  min-width: 250px;
 }
 
 .header__signin {
@@ -210,9 +216,6 @@ img {
 .header__signup:hover {
   background: #f53838;
   color: #ffffff;
-  -webkit-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
-  -moz-box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
-  box-shadow: 0px 29px 23px -21px rgba(245, 56, 56, 0.75);
 }
 
 .intro {
@@ -267,7 +270,7 @@ img {
 }
 
 .intro__image {
-  max-width: 100%;
+  max-width: 51%;
   height: auto;
 }
 
@@ -387,8 +390,6 @@ img {
 
 .feature__item::before {
   content: url("/img/section/feature/Vector.svg");
-  position: relative;
-  left: -12px;
   top: 7px;
 }
 
@@ -924,408 +925,293 @@ img {
   color: #4f5665;
 }
 
-@media (max-width: 768px) {
-  .customer__card:nth-child(n+2) {
-    display: none;
-  }
-  .customer__card:nth-child(1) {
-    margin: auto;
-  }
-}
 @media (max-width: 1024px) {
-  .block {
-    max-width: calc(0.4rem + 116.641vw);
-    padding: 0px calc(0.4rem + 2.383vw);
-  }
   .header {
-    padding-top: calc(0.4rem + 3.848vw);
-    padding-bottom: calc(0.4rem + 3.848vw);
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-between;
   }
-  .header__item {
-    margin-right: calc(0.4rem + 3.359vw);
+  .header__menuButton {
+    order: 2;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
   }
-  .header__link {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.309vw);
+  .burger {
+    margin: 13px 0px;
+  }
+  .burger__close {
+    width: 28px;
+    height: 2px;
+    background-color: #4f5665;
+    transition: 0.5s;
+    margin: auto 0;
+  }
+  .burger__close:before {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #4f5665;
+    transition: 0.5s;
+    position: absolute;
+    top: 11px;
+  }
+  .burger__close:after {
+    content: "";
+    width: 28px;
+    height: 2px;
+    background-color: #4f5665;
+    transition: 0.5s;
+    position: absolute;
+    top: -11px;
+  }
+  .burger__open {
+    width: 28px;
+    height: 2px;
+    background-color: transparent;
+    transition: 0.5s;
+    margin: auto 0;
+  }
+  .burger__open:before {
+    content: "";
+    width: 39px;
+    height: 2px;
+    background-color: #4f5665;
+    transition: 0.5s;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -5px;
+  }
+  .burger__open:after {
+    content: "";
+    width: 39px;
+    height: 2px;
+    background-color: #4f5665;
+    transition: 0.5s;
+    position: absolute;
+    transform: rotate(-45deg);
+    right: -5px;
   }
   .header__logo {
-    margin-right: calc(0.4rem + 1.406vw);
+    margin-right: 0px;
+    justify-content: flex-start;
+    margin: 20px 0px;
+    order: 1;
+    width: 50%;
   }
-  .header__logo-link {
-    width: calc(0.4rem + 2.871vw);
-    height: calc(0.4rem + 2.969vw);
-    margin-right: calc(0.4rem - 0.059vw);
+  .header__nav {
+    width: 70%;
+    order: 3;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    min-height: 70%;
+    height: 100%;
+    margin-left: -20px;
+    background-color: white;
+    padding-top: 100px;
+    padding-left: 20px;
+    -webkit-box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
+    box-shadow: 3px 1px 19px 0px rgba(34, 60, 80, 0.6);
+    z-index: 1000;
   }
-  .header__logo__text {
-    margin-left: calc(0.4rem - 0.059vw);
-    font-size: calc(0.4rem + 1.406vw);
-    line-height: calc(0.4rem + 1.797vw);
-  }
-  .header__logo-pic {
-    width: calc(0.4rem + 2.871vw);
-    height: calc(0.4rem + 2.969vw);
-    margin-right: calc(0.4rem - 0.059vw);
-  }
-  .header__sign {
-    padding: 0 calc(0.4rem + 0.918vw);
-    max-width: calc(0.4rem + 22.207vw);
-  }
-  .header__signin {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.309vw);
-    margin-right: calc(0.4rem - 0.059vw);
+  .header__list {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .header__signup {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.309vw);
-    border: 1px solid #f53855;
-    width: calc(0.4rem + 14.102vw);
-    height: calc(0.4rem + 3.848vw);
-    border-radius: calc(0.4rem + 4.336vw);
-    margin-left: calc(0.4rem - 0.059vw);
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 36px;
+    width: 80px;
+    color: #0b132a;
+    margin: 0px;
+    border: none;
+    text-align: left;
   }
-  .intro {
-    padding-top: calc(0.4rem + 3.848vw);
-    padding-bottom: calc(0.4rem + 4.336vw);
+  .header__signup:hover {
+    all: unset;
+  }
+  .header__signin {
+    font-size: 21px;
+    line-height: 36px;
+    width: 80px;
+    text-align: left;
+  }
+  .header__sign {
+    width: 70%;
+    margin-left: 0px;
+    order: 2;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    margin-left: -20px;
+    padding-top: 20px;
+    background-color: white;
+    padding-left: 20px;
+    z-index: 1000;
+  }
+  .header__link {
+    font-size: 21px;
+  }
+  .header__line {
+    display: none;
+  }
+  .header__menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header__button {
+    display: block;
+    margin: 0;
+    padding: 10px 5px;
+  }
+  .header__item {
+    padding: 10px;
+  }
+  .hidden {
+    display: none;
+  }
+  .header__link {
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.488vw);
+  }
+  .header__logo__text {
+    font-size: calc(1rem + 0.586vw);
+    line-height: calc(1rem + 0.586vw);
+  }
+  .header__signin {
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.488vw);
+  }
+  .header__signup {
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.488vw);
   }
   .intro__title {
-    font-size: calc(0.4rem + 4.336vw);
-    line-height: calc(0.4rem + 6.289vw);
-    margin-bottom: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 3.516vw);
+    line-height: calc(1rem + 5.469vw);
   }
   .intro__subtitle {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-    margin: calc(0.4rem + 0.43vw) 0px calc(0.4rem + 1.895vw) 0px;
-  }
-  .intro__button {
-    margin-top: calc(0.4rem + 1.895vw);
-    width: calc(0.4rem + 23.867vw);
-    height: calc(0.4rem + 5.313vw);
-    border-radius: calc(0.4rem + 0.43vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.895vw);
-  }
-  .benefits {
-    padding-top: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 4.336vw);
-  }
-  .benefits__wrap {
-    padding-top: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 4.336vw);
-    border-radius: calc(0.4rem + 0.43vw);
-    padding: calc(0.4rem + 3.066vw) 0px;
-  }
-  .benefits__card {
-    margin: 0px calc(0.4rem + 0.43vw);
-  }
-  .benefits__card-pic {
-    margin-right: calc(0.4rem + 2.969vw);
-    width: calc(0.4rem + 4.824vw);
-    height: calc(0.4rem + 4.824vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .benefits__card-title {
-    font-size: calc(0.4rem + 1.895vw);
-    line-height: calc(0.4rem + 2.383vw);
+    font-size: calc(1rem + 1.074vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .benefits__card-desc {
-    font-size: calc(0.4rem + 1.406vw);
-    line-height: calc(0.4rem + 2.383vw);
-  }
-  .benefits__line {
-    width: 0px;
-    border: 1px solid #eeeff2;
-  }
-  .feature {
-    padding-top: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 11.66vw);
-  }
-  .feature__image {
-    max-width: calc(0.4rem + 49.063vw);
-    margin-right: calc(0.4rem + 1.406vw);
-  }
-  .feature__text {
-    margin-left: calc(0.4rem + 1.406vw);
+    font-size: calc(1rem + 0.586vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .feature__title {
-    font-size: calc(0.4rem + 2.871vw);
-    line-height: calc(0.4rem + 4.336vw);
-    margin-top: calc(0.4rem + 3.359vw);
+    font-size: calc(1rem + 2.051vw);
+    line-height: calc(1rem + 3.516vw);
   }
   .feature__subtitle {
-    margin-top: calc(0.4rem + 1.406vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-  }
-  .feature__list {
-    margin-top: calc(0.4rem + 1.406vw);
-  }
-  .feature__cheked {
-    margin-right: calc(0.4rem + 0.625vw);
-    width: calc(0.4rem + 1.406vw);
-    height: calc(0.4rem + 1.406vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .feature__item {
-    margin-left: calc(0.4rem + 0.43vw);
-    font-size: calc(0.4rem + 0.82vw);
-    line-height: calc(0.4rem + 2.383vw);
-  }
-  .feature__item::before {
-    top: calc(0.4rem + 0.137vw);
-  }
-  .plan__title__block {
-    padding-top: calc(0.4rem + 7.266vw);
-    padding-bottom: calc(0.4rem + 2.871vw);
+    font-size: 14px;
+    line-height: calc(1rem + 1.563vw);
   }
   .plan__title {
-    font-size: calc(0.4rem + 2.871vw);
-    line-height: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 0.43vw);
-    max-width: calc(0.4rem + 36.953vw);
+    font-size: calc(1rem + 2.051vw);
+    line-height: calc(1rem + 3.516vw);
   }
   .plan__subtitle {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-    max-width: calc(0.4rem + 53.652vw);
-    padding-top: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .plan__card {
-    margin: 0px calc(0.4rem + 1.895vw);
-    border: 2px solid #dddddd;
-    border-radius: calc(0.4rem + 0.43vw);
-    padding: calc(0.4rem + 7.266vw) calc(0.4rem + 0.43vw) calc(0.4rem + 4.336vw);
-  }
-  .plan__card:hover {
-    border: 2px solid #f53838;
-  }
-  .plan__card-distr__block {
-    padding-bottom: calc(0.4rem + 4.336vw);
-  }
-  .plan__card-pic {
-    width: calc(0.4rem + 13.613vw);
-    height: calc(0.4rem + 15.566vw);
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 50px 10px 20px;
   }
   .plan__card-title {
-    font-size: calc(0.4rem + 1.211vw);
-    line-height: calc(0.4rem + 2.383vw);
-    margin-top: calc(0.4rem + 2.383vw);
-  }
-  .plan__card-list__block {
-    padding-bottom: calc(0.4rem + 4.336vw);
-  }
-  .plan__card-list {
-    margin-top: calc(0.4rem + 0.43vw);
-  }
-  .plan__card__check-img {
-    width: calc(0.4rem + 1.211vw);
-    height: calc(0.4rem + 0.332vw);
+    font-size: calc(1rem + 0.391vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .plan__card-desc {
-    margin-left: calc(0.4rem + 1.895vw);
-    font-size: calc(0.4rem + 0.82vw);
-    line-height: calc(0.4rem + 2.383vw);
+    margin-left: calc(1rem + 1.074vw);
+    font-size: 14px;
+    line-height: calc(1rem + 1.563vw);
   }
   .plan__card-price {
-    margin-top: calc(0.4rem + 4.336vw);
-    font-size: calc(0.4rem + 1.895vw);
-    line-height: calc(0.4rem + 2.383vw);
+    margin-top: calc(1rem + 3.516vw);
+    font-size: calc(1rem + 1.074vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .plan__select__button {
-    margin-top: calc(0.4rem + 1.406vw);
-    max-width: calc(0.4rem + 16.836vw);
-    height: calc(0.4rem + 3.848vw);
-    border: 2px solid #f53838;
-    border-radius: calc(0.4rem + 4.336vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.309vw);
-  }
-  .map__title__block {
-    padding-top: calc(0.4rem + 6.777vw);
-    padding-bottom: calc(0.4rem + 7.07vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.488vw);
   }
   .map__title {
-    font-size: calc(0.4rem + 2.871vw);
-    line-height: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 0.43vw);
-    max-width: calc(0.4rem + 36.953vw);
-    font-size: calc(0.4rem + 2.871vw);
+    font-size: calc(1rem + 2.051vw);
+    line-height: calc(1rem + 3.516vw);
   }
   .map__subtitle {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-    max-width: calc(0.4rem + 53.652vw);
-    padding-top: calc(0.4rem + 0.43vw);
-  }
-  .map__image {
-    padding-top: calc(0.4rem + 7.07vw);
-    padding-bottom: calc(0.4rem + 1.211vw);
-  }
-  .clients__block {
-    margin-top: calc(0.4rem + 4.336vw);
-    margin-bottom: calc(0.4rem + 6.289vw);
-  }
-  .clients__logo {
-    max-height: calc(0.4rem + 19.961vw);
-    padding-left: calc(0.4rem + 0.43vw);
-    padding-right: calc(0.4rem + 0.43vw);
-  }
-  .customers {
-    max-width: calc(0.4rem + 116.641vw);
-  }
-  .customers__title__block {
-    padding-top: calc(0.4rem + 6.777vw);
-    padding-bottom: calc(0.4rem + 7.07vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .customers__title {
-    font-size: calc(0.4rem + 2.871vw);
-    line-height: calc(0.4rem + 4.336vw);
-    padding-bottom: calc(0.4rem + 0.43vw);
-    max-width: calc(0.4rem + 43.203vw);
+    font-size: calc(1rem + 2.051vw);
+    line-height: calc(1rem + 3.516vw);
   }
   .customers__subtitle {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-    max-width: calc(0.4rem + 53.652vw);
-    padding-top: calc(0.4rem + 0.43vw);
-  }
-  .customers__cards {
-    margin-left: calc(0.4rem + 2.383vw);
-  }
-  .customer__card {
-    width: calc(0.4rem + 38.516vw);
-    border: 2px solid #dddddd;
-    border-radius: calc(0.4rem + 0.43vw);
-    padding: calc(0.4rem + 2.383vw);
-    margin-right: calc(0.4rem + 4.336vw);
-  }
-  .customer__photo {
-    width: calc(0.4rem + 4.336vw);
-    height: calc(0.4rem + 4.336vw);
-    margin-right: calc(0.4rem + 1.406vw);
-  }
-  .customer__rating {
-    margin-left: 0px;
-    margin-top: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .customer__name {
-    font-size: calc(0.4rem + 1.211vw);
-    line-height: calc(0.4rem + 1.211vw);
-  }
-  .customer__location {
-    margin-top: calc(0.4rem - 0.059vw);
-    font-size: calc(0.4rem + 0.82vw);
-    line-height: calc(0.4rem + 0.82vw);
-  }
-  .customer__rating {
-    margin-left: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 0.391vw);
+    line-height: calc(1rem + 0.391vw);
   }
   .customer__rate {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.016vw);
-    margin-right: calc(0.4rem + 0.527vw);
-  }
-  .customer__star {
-    width: calc(0.4rem + 1.211vw);
-    height: calc(0.4rem + 1.211vw);
-    margin-bottom: 3px;
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.195vw);
   }
   .customer__comment {
-    margin-top: calc(0.4rem - 0.059vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-  }
-  .buttons__block {
-    padding: calc(0.4rem + 5.313vw) 0px;
-  }
-  .button__dot {
-    margin-left: calc(0.4rem + 0.918vw);
-    border-radius: calc(0.4rem + 0.674vw);
-    width: calc(0.4rem + 0.918vw);
-    height: calc(0.4rem + 0.918vw);
-  }
-  .active__button {
-    border-radius: calc(0.4rem + 0.674vw);
-    width: calc(0.4rem + 3.848vw);
-    height: calc(0.4rem + 0.918vw);
-  }
-  .button__arrow {
-    margin-left: calc(0.4rem + 1.406vw);
-  }
-  .button__arrow:hover {
-    stroke-width: 2.3px;
-  }
-  .button__arrow:hover path {
-    stroke-width: 1px;
-  }
-  .subscribe {
-    border-radius: calc(0.4rem + 0.43vw);
-    padding: calc(0.4rem + 5.166vw) calc(0.4rem + 6.289vw);
-    top: calc(0.4rem + 9.219vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .subscribe__title {
-    font-size: calc(0.4rem + 2.871vw);
-    line-height: calc(0.4rem + 3.848vw);
-    max-width: calc(0.4rem + 35.781vw);
+    font-size: calc(1rem + 2.051vw);
+    line-height: calc(1rem + 3.027vw);
   }
   .subscribe__subtitle {
-    margin-top: calc(0.4rem + 1.406vw);
-    max-width: calc(0.4rem + 39.492vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.016vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.195vw);
   }
   .subscribe__button {
-    margin-left: calc(0.4rem - 0.059vw);
-    width: calc(0.4rem + 23.867vw);
-    height: calc(0.4rem + 5.313vw);
-    border-radius: calc(0.4rem + 0.43vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 1.895vw);
-  }
-  .footer__wrapper {
-    padding: calc(0.4rem + 15.469vw) calc(0.4rem + 2.383vw);
-  }
-  .footer__logo-link img {
-    width: calc(0.4rem + 2.871vw);
-    height: calc(0.4rem + 2.871vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.074vw);
   }
   .footer__com_name {
-    width: calc(0.4rem + 9.609vw);
-    height: calc(0.4rem + 1.797vw);
-    font-size: calc(0.4rem + 1.406vw);
-    line-height: calc(0.4rem + 1.797vw);
-    margin-left: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 0.586vw);
+    line-height: calc(1rem + 0.586vw);
   }
   .footer__vpn {
-    margin-top: calc(0.4rem + 1.992vw);
-    max-width: calc(0.4rem + 32.656vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-    margin-bottom: calc(0.4rem + 2.383vw);
-  }
-  .footer__socs {
-    max-width: calc(0.4rem + 13.125vw);
-  }
-  .footer__soc {
-    width: calc(0.4rem + 2.676vw);
-    height: calc(0.4rem + 2.676vw);
-    box-shadow: 0px calc(0.4rem + 1.211vw) calc(0.4rem + 1.211vw) rgba(17, 19, 35, 0.08);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .footer__year {
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
-  }
-  .footer__nav {
-    margin-left: calc(0.4rem + 0.43vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .footer__menu-title {
-    font-size: calc(0.4rem + 1.211vw);
-    line-height: calc(0.4rem + 2.383vw);
-    padding-bottom: calc(0.4rem + 1.406vw);
+    font-size: calc(1rem + 0.391vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .footer__menu-item {
-    margin-top: calc(0.4rem + 0.43vw);
-    font-size: calc(0.4rem + 1.016vw);
-    line-height: calc(0.4rem + 2.383vw);
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 1.563vw);
   }
   .customer__card:nth-child(n+3) {
     display: none;
@@ -1333,6 +1219,94 @@ img {
   .intro__title {
     font-size: calc(1.37rem + 3vw);
     line-height: calc(2.8rem + 3vw);
+  }
+}
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column-reverse;
+  }
+  .intro__about {
+    max-width: 100%;
+  }
+  .feature__block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature__image {
+    max-width: 70%;
+  }
+  .feature__text {
+    max-width: 100%;
+  }
+  .customer__card:nth-child(n+2) {
+    display: none;
+  }
+  .customer__card:nth-child(1) {
+    margin: auto;
+  }
+  .intro__button {
+    width: 150px;
+    height: 45px;
+  }
+  .plan__card {
+    margin: 5% 1%;
+  }
+  .footer__wrapper {
+    flex-direction: column-reverse;
+  }
+  .footer__nav {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 568px) {
+  .plans__cards__block {
+    flex-direction: column;
+  }
+  .clients__block {
+    flex-direction: column;
+    width: 90%;
+  }
+  .benefits__card {
+    flex-direction: column;
+  }
+  .benefits__card-pic {
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .benefits__card-title {
+    text-align: center;
+  }
+  .benefits__text {
+    display: flex;
+    flex-direction: column;
+  }
+  .plan__card {
+    margin: 5% auto;
+  }
+  .buttons__block {
+    flex-direction: column;
+  }
+  .buttons__left {
+    margin-bottom: 30px;
+  }
+  .button__dot {
+    margin-right: 15px;
+  }
+  .button__arrow {
+    margin-left: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .subscribe {
+    flex-direction: column;
+  }
+  .subscribe__block {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .subscribe__button {
+    max-width: 80%;
   }
 }
 
