@@ -260,9 +260,9 @@ img {
 }
 .benefits__wrap {
     width: 100%;
-    margin: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    // margin: auto;
+    // padding-top: 50px;
+    // padding-bottom: 50px;
     border-radius: 10px;
     margin: auto;
     display: flex;
@@ -357,7 +357,9 @@ img {
 }
 .feature__item::before {
     content: url('/img/section/feature/Vector.svg');
-    top: 7px;
+    position: relative;
+    top: 6px;
+    right: 2px;
 }
 
 // plan
@@ -601,7 +603,7 @@ img {
 .customers__cards {
     // max-width: 1200px;
     // padding: 0px 30px;
-    margin-left: 30px;
+    margin-left: 6%;
     // width: 100%;
     display: flex;
     justify-content: space-between;
@@ -614,9 +616,9 @@ img {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 2.8%;
     // margin-left: 15px;
-    margin-right: 50px;
+    margin-right: 4.55%;
 }
 .customer__info {
     display: flex;
@@ -728,14 +730,14 @@ img {
 // subscribe
 
 .subscribe {
-    width: 100%;
+    width: 95%;
     display: flex;
     margin: auto;
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
     border-radius: 10px;
-    padding: 58.5px 70px;
+    padding: 4.4% 5.3%;
     z-index: 2;
     position: relative;
     top: 100px;
@@ -789,7 +791,15 @@ img {
 }
 
 .footer__wrapper {
-    padding: 164px 30px;
+    // padding: 164px 30px;
+    // padding-top: 164px;
+    // padding-right: 30px;
+    // padding-left: 30px;
+    max-width: 95%;
+    padding: 164px 5% 0.5% 5%;
+    // padding-top: 0px;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -886,8 +896,6 @@ img {
         justify-content: flex-end;
         position: relative;
         cursor: pointer;
-
-        
     }
     .burger {
         margin: 13px 0px;
@@ -998,6 +1006,7 @@ img {
     }
     .header__sign {
         width: 70%;
+        min-width: auto;
         margin-left: 0px;
         order: 2;
         margin: 0;
@@ -1245,7 +1254,7 @@ img {
         flex-direction: column;
         width: 90%;
     }
-    .clients__logo{
+    .clients__logo {
         padding-bottom: 15px;
     }
     .benefits__card {
@@ -1273,7 +1282,7 @@ img {
     .buttons__left {
         margin-bottom: 30px;
     }
-    .button__dot{
+    .button__dot {
         margin-right: 15px;
     }
 
