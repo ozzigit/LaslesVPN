@@ -1,0 +1,106 @@
+.customers {
+    margin: auto;
+    max-width: 1200px;
+    // padding: 30px 0px 0px 0px;
+}
+.customers__title__block {
+    padding-top: 75px;
+    padding-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.customers__title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #0b132a;
+    padding-bottom: 10px;
+    max-width: 448px;
+}
+.customers__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #4f5665;
+    max-width: 555px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.customers__cards {
+    margin-left: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.customer__card {
+    width: 400px;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.8%;
+    margin-right: 4.55%;
+}
+.customer__info {
+    display: flex;
+    align-items: center;
+}
+.customer__photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.customer__text {
+    display: flex;
+    flex-direction: column;
+}
+.customer__rating {
+    margin-left: 0px;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+.customer__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #0b132a;
+}
+.customer__location {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #4f5665;
+}
+.customer__rating {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.customer__rate {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #0b132a;
+    margin-right: 11px;
+}
+.customer__star {
+    width: 13px;
+    height: 13px;
+    margin-bottom: 3px;
+}
+.customer__comment {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #0b132a;
+}

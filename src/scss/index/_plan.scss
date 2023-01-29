@@ -1,0 +1,139 @@
+.plan {
+    background: linear-gradient(to top, #ffffff, 80%, #f6f6f6);
+    margin: auto;
+}
+.plan__title__block {
+    padding-top: 80px;
+    padding-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plan__title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #0b132a;
+    padding-bottom: 10px;
+    max-width: 384px;
+}
+
+.plan__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #4f5665;
+    max-width: 555px;
+    padding-top: 10px;
+    width: 100%;
+}
+.plans__cards__block {
+    display: flex;
+    justify-content: space-between;
+}
+.plan__card {
+    width: 100%;
+    margin: 0px 25px;
+    background: #ffffff;
+    border: 2px solid #dddddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+    padding: 80px 10px 50px;
+}
+.plan__card:hover {
+    border: 2px solid #f53838;
+}
+.plan__card-distr__block {
+    height: 80%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plan__card-pic {
+    width: 145px;
+    height: 165px;
+}
+.plan__card-title {
+    align-self: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #0b132a;
+    margin-top: 30px;
+}
+.plan__card-list__block {
+    height: 80%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+}
+
+.plan__card-list {
+    display: flex;
+    margin-top: 10px;
+}
+
+.plan__card-list::before {
+    content: url('/img/section/plan/checked.svg');
+}
+.plan__card__check-img {
+    align-self: center;
+    width: 13px;
+    height: 9px;
+}
+.plan__card-desc {
+    margin-left: 25px;
+    align-self: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
+    color: #4f5665;
+}
+
+.plan__card-price__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 20%;
+}
+.plan__card-price {
+    align-self: center;
+    margin-top: 50px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    color: #0b132a;
+    mark {
+        color: #4f5665;
+        background-color: #ffffff;
+    }
+}
+.plan__select__button {
+    margin-top: 20px;
+    align-self: center;
+    max-width: 178px;
+    width: 100%;
+    height: 45px;
+    border: 2px solid #f53838;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #f53838;
+    background: #ffffff;
+    transition: 0.5s;
+}
+.plan__select__button:hover {
+    color: #ffffff;
+    background: #f53838;
+    box-shadow: 0px 20px 20px -16px rgba(245, 56, 56, 1);
+}

@@ -1,11 +1,4 @@
-.header__link {
-    font-size: calc(1rem + 0.195vw);
-    line-height: calc(1rem + 0.488vw);
-}
-.header__logo__text {
-    font-size: calc(1rem + 0.586vw);
-    line-height: calc(1rem + 0.586vw);
-}
+// --------------fonts ------------------------
 .header__signin {
     font-size: calc(1rem + 0.195vw);
     line-height: calc(1rem + 0.488vw);
@@ -13,6 +6,14 @@
 .header__signup {
     font-size: calc(1rem + 0.195vw);
     line-height: calc(1rem + 0.488vw);
+}
+.header__link {
+    font-size: calc(1rem + 0.195vw);
+    line-height: calc(1rem + 0.488vw);
+}
+.header__logo__text {
+    font-size: calc(1rem + 0.586vw);
+    line-height: calc(1rem + 0.586vw);
 }
 .intro__title {
     font-size: calc(1rem + 3.516vw);
@@ -23,6 +24,10 @@
     line-height: calc(1rem + 1.563vw);
 }
 
+.intro__title {
+    font-size: calc(1.37rem + 3vw); //50px in 3%
+    line-height: calc(2.8rem + 3vw); //70px in 3%
+}
 .benefits__card-title {
     font-size: calc(1rem + 1.074vw);
     line-height: calc(1rem + 1.563vw);
@@ -132,3 +137,5 @@
     font-size: calc(1rem + 0.195vw);
     line-height: calc(1rem + 1.563vw);
 }
+
+// --------------fonts ------------------------

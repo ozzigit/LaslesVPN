@@ -1,0 +1,37 @@
+.map {
+    margin: auto;
+}
+.map__title__block {
+    padding-top: 75px;
+    padding-bottom: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map__title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    color: #0b132a;
+    padding-bottom: 10px;
+    max-width: 384px;
+    font-weight: 500;
+    font-size: 35px;
+}
+.map__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #4f5665;
+    max-width: 555px;
+    padding-top: 10px;
+    width: 100%;
+}
+.map__image {
+    margin: 0 auto;
+    padding-top: 78px;
+    padding-bottom: 18px;
+}

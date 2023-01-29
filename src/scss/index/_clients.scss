@@ -1,0 +1,17 @@
+.clients {
+    margin: auto;
+    align-items: center;
+}
+.clients__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.clients__logo {
+    max-height: 210px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
