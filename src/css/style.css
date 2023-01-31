@@ -737,6 +737,7 @@ img {
 
 .button__arrow {
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .rotated__arrow {

@@ -15,6 +15,7 @@
     background: p#dde0e4;
 }
 .active__button {
+
     border-radius: 12.5px;
     width: 45px;
     height: 15px;
@@ -22,6 +23,7 @@
 }
 .button__arrow {
     margin-left: 20px;
+    cursor: pointer;
 }
 .rotated__arrow {
     transform: rotate(0.5turn);
