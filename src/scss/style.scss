@@ -58,6 +58,9 @@ img {
 //footer---------------------------------------------------------------
 @import 'index/footer';
 
+//slider---------------------------------------------------------------
+@import 'index/slider';
+
 //media---------------------------------------------------------------
 @media (max-width: 1024px) {
     // --------------fonts ------------------------
@@ -65,9 +68,12 @@ img {
     //burger
     @import 'index/burger.scss';
 
-    .customer__card:nth-child(n + 3) {
-        display: none;
+    .customer__card {
+        overflow: hidden;
     }
+    // .customer__card:nth-child(n + 3) {
+    // display: none;
+    // }
 }
 @media (max-width: 768px) {
     .intro {
@@ -87,12 +93,12 @@ img {
         max-width: 100%;
     }
 
-    .customer__card:nth-child(n + 2) {
-        display: none;
-    }
-    .customer__card:nth-child(1) {
-        margin: auto;
-    }
+    // .customer__card:nth-child(n + 2) {
+    // display: none;
+    // }
+    // .customer__card:nth-child(1) {
+    // margin: auto;
+    // }
     .intro__button {
         width: 150px;
         height: 45px;
@@ -137,6 +143,10 @@ img {
     .plan__card {
         margin: 5% auto;
     }
+
+    .customer__card {
+    }
+
     .buttons__block {
         flex-direction: column;
     }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -593,6 +594,7 @@ img {
 .customers {
   margin: auto;
   max-width: 1200px;
+  min-width: 0;
 }
 
 .customers__title__block {
@@ -630,16 +632,17 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  min-width: 0;
 }
 
 .customer__card {
-  width: 400px;
-  border: 2px solid #dddddd;
+  min-width: 400px;
+  border: 3px solid #dddddd;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 2.8%;
-  margin-right: 4.55%;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .customer__info {
@@ -725,7 +728,7 @@ img {
   border-radius: 12.5px;
   width: 15px;
   height: 15px;
-  background: p #dde0e4;
+  background: #dde0e4;
 }
 
 .active__button {
@@ -903,6 +906,55 @@ img {
 }
 .footer__menu-item a {
   color: #4f5665;
+}
+
+/* Слайдер */
+/* Слайдер запущен */
+/* Слайдер с точками */
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+} /* Лента слайдов */
+.slick-track {
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide {
+  margin-right: 30px;
+  padding: 30px;
+} /* Слайд активный (показывается) */
+/* Слайд основной */
+/* Слайд по центру */
+/* Клонированный слайд */
+/* Стрелка */
+/* Стрелка влево */
+/* Стрелка вправо */
+/* Стрелка не активная */
+/* Точки (булиты) */
+.slick-dots {
+  display: flex;
+}
+
+/* Элемент точки */
+.slick-dots button {
+  font-size: 0;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+  border-radius: 12.5px;
+  width: 15px;
+  height: 15px;
+  background: #dde0e4;
+}
+
+/* Активная точка */
+li.slick-active button {
+  border-radius: 7.5px;
+  width: 45px;
+  height: 15px;
+  background: #f53838;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 1024px) {
@@ -1194,8 +1246,8 @@ img {
   .hidden {
     display: none;
   }
-  .customer__card:nth-child(n+3) {
-    display: none;
+  .customer__card {
+    overflow: hidden;
   }
 }
 @media (max-width: 768px) {
@@ -1214,12 +1266,6 @@ img {
   }
   .feature__text {
     max-width: 100%;
-  }
-  .customer__card:nth-child(n+2) {
-    display: none;
-  }
-  .customer__card:nth-child(1) {
-    margin: auto;
   }
   .intro__button {
     width: 150px;

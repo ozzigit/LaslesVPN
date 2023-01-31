@@ -1,6 +1,6 @@
 'use strict';
 // consts----------------------------------------------------------
-const api_url = 'http://127.0.0.1:8000/api';
+const api_url = 'http://77.120.190.159:8080/api';
 
 // burger----------------------------------------------------------
 let menuButton = document.querySelector('.header__menuButton');
@@ -30,54 +30,91 @@ document.addEventListener('click', function (e) {
     }
 });
 
+//----------------------------------------------------------------------
+let slick_config = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    appendDots: $('.buttons__left'),
+    appendArrows: $('.buttons__right'),
+    prevArrow: $('.left__arrow'),
+    nextArrow: $('.right__arrow'),
+    centermode: true,
+    // autoplay: true,
+    // autoplaySpeed: 7000,
+    // centerPadding: '50px',
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+            },
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
+};
 async function render_data_from_rerver() {
     // data downloading---------------------------------------------------
-    const response = await fetch(api_url, {
-        method: 'GET',
-        mode: 'cors',
-        redirect: 'follow',
-    });
-    const api_data = await response.json();
+
+    let flag_is_no_api = false;
+    let api_data;
     //bad api
     try {
+        const response = await fetch(api_url, {
+            method: 'GET',
+            mode: 'cors',
+            redirect: 'follow',
+        });
+        api_data = await response.json();
         let new_elm = {};
         new_elm.id = api_data[0].id;
-    } catch (pars_err) {
-        console.error('api stucture error', pars_err.message);
-        return;
+    } catch (request_err) {
+        console.error('api request error', request_err.message);
+        flag_is_no_api = true;
     }
 
-    let card_example = document
-        .querySelector('.customer__card')
-        .cloneNode(true);
+    if (!flag_is_no_api) {
+        let card_example = document
+            .querySelector('.customer__card')
+            .cloneNode(true);
 
-    let card_list = document.querySelector('.customers__cards');
-    //clear default list
-    while (card_list.firstChild) {
-        card_list.removeChild(card_list.firstChild);
+        let card_list = document.querySelector('.customers__cards');
+
+        //clear default list
+        while (card_list.firstChild) {
+            card_list.removeChild(card_list.firstChild);
+        }
+        // rendering data ------------------------------------------------
+        for (let obj_index in api_data) {
+            try {
+                let new_card = card_example.cloneNode(true);
+                new_card.querySelector('.customer__name').innerText =
+                    api_data[obj_index].name;
+                new_card.querySelector('.customer__location').innerText =
+                    api_data[obj_index].location;
+                new_card.querySelector('.customer__photo-link').src =
+                    api_data[obj_index].avatar;
+                new_card.querySelector('.customer__comment').innerText =
+                    api_data[obj_index].message;
+                new_card.querySelector('.customer__rate').innerText =
+                    api_data[obj_index].rating;
+                card_list.append(new_card);
+            } catch (pars_err) {
+                console.error('api stucture error', pars_err.message);
+            }
+        }
     }
 
-    // rendering data ------------------------------------------------
-    for (let obj_index in api_data) {
-        // try {
-        let new_card = card_example.cloneNode(true);
-        new_card.querySelector('.customer__name').innerText =
-            api_data[obj_index].name;
-        new_card.querySelector('.customer__location').innerText =
-            api_data[obj_index].location;
-        // new_card.queryselector('.customer__photo-link').src =
-            // api_data[obj_index].avatar;
-        console.log(api_data[obj_index].avatar)
-
-        new_card.querySelector('.customer__comment').innerText =
-            api_data[obj_index].message;
-        new_card.querySelector('.customer__rate').innerText =
-            api_data[obj_index].rating;
-        card_list.append(new_card);
-        // } catch (pars_err) {
-
-        // console.error('api stucture error', pars_err.message);
-        // }
-    }
+    // render slides
+    $('.customers__cards').slick(slick_config);
 }
-// render_data_from_rerver();
+
+//upload  and render data from api
+render_data_from_rerver();
