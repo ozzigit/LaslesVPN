@@ -94,6 +94,45 @@ async function render_data_from_rerver() {
         // rendering data ------------------------------------------------
         for (let obj_index in api_data) {
             try {
+                let blank_card = `<div class="customer__card">
+                                    <div>
+                                        <div class="customer__info">
+                                            <div class="customer__photo">
+                                                <img
+                                                    src="${api_data[obj_index].avatar}"
+                                                    alt="customer__photo"
+                                                    class="customer__photo-link"
+                                                />
+                                            </div>
+                                            <div class="customer__text">
+                                                <span class="customer__name">
+                                                    ${api_data[obj_index].name}
+                                                </span>
+                                                <span class="customer__location">
+                                                    ${api_data[obj_index].location}
+                                                </span>
+                                            </div>
+                                            <div class="customer__rating">
+                                                <span class="customer__rate">
+                                                    ${api_data[obj_index].rating}
+                                                </span>
+                                                <div class="customer__star">
+                                                    <img
+                                                        src="/img/section/customers/star.png"
+                                                        alt="star"
+                                                        class="customer__star"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="customer__comment">
+                                            ${api_data[obj_index].message}
+                                        </p>
+                                    </div>
+                                </div>`;
+                card_list.innerHTML += blank_card;
+
+                /*               
                 let new_card = card_example.cloneNode(true);
                 new_card.querySelector('.customer__name').innerText =
                     api_data[obj_index].name;
@@ -106,6 +145,8 @@ async function render_data_from_rerver() {
                 new_card.querySelector('.customer__rate').innerText =
                     api_data[obj_index].rating;
                 card_list.append(new_card);
+
+*/
             } catch (pars_err) {
                 console.error('api stucture error', pars_err.message);
             }
