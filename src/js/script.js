@@ -94,6 +94,7 @@ async function render_data_from_rerver() {
         // rendering data ------------------------------------------------
         for (let obj_index in api_data) {
             try {
+                // innerHtml variant
                 let blank_card = `<div class="customer__card">
                                     <div>
                                         <div class="customer__info">
@@ -132,6 +133,7 @@ async function render_data_from_rerver() {
                                 </div>`;
                 card_list.innerHTML += blank_card;
 
+                // querySelector variant
                 /*               
                 let new_card = card_example.cloneNode(true);
                 new_card.querySelector('.customer__name').innerText =
@@ -145,8 +147,7 @@ async function render_data_from_rerver() {
                 new_card.querySelector('.customer__rate').innerText =
                     api_data[obj_index].rating;
                 card_list.append(new_card);
-
-*/
+                */
             } catch (pars_err) {
                 console.error('api stucture error', pars_err.message);
             }

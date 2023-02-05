@@ -1,0 +1,63 @@
+//null
+@import "_null.scss";
+
+
+
+.margin {
+	margin-bottom: 30px;
+}
+
+.btn {
+	font-size: 20px;
+}
+.btn-close {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.btn {
+	margin-top: 30px;
+}
+.card {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.answer {
+	padding-left: 50px;
+	margin-top: 25px;
+	display: flex;
+	align-items: center;
+}
+.static {
+	position: static;
+	margin-left: 10px;
+}
+
+.form-check-input {
+	margin: 0px 10px;
+}
+
+.form-check-label {
+	font-size: 18px;
+}
+
+.hide {
+	display: none;
+}
+
+.quizContainer {
+	padding: 15px 0px;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+footer{
+	min-height: 50px;
+}
