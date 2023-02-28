@@ -23,17 +23,17 @@
                 </div>
             </section>
             <section class="quizContainer">
-                <div class="card container quiz">
+                <div class="card container quiz" draggable="true">
                     <button type="button" class="btn-close"></button>
                     <div class="card-body">
                         <h3 class="title h3">Enter name of quiz:</h3>
                         <input
-                            class="form-control"
+                            class="form-control quiz_name"
                             type="text"
                             placeholder="Quiz name"
                         />
 
-                        <div class="card question">
+                        <div class="card question" draggable="true">
                             <button
                                 type="button"
                                 class="btn-close"
@@ -47,7 +47,7 @@
                                     placeholder="Question"
                                 />
 
-                                <div class="answer">
+                                <div class="answer" draggable="true">
                                     <input
                                         class="form-control answer_text"
                                         type="text"

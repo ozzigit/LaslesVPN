@@ -136,4 +136,8 @@ footer {
   min-height: 50px;
 }
 
+.dragging {
+  opacity: 0.5;
+}
+
 /*# sourceMappingURL=quiz.css.map */

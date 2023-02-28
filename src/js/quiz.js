@@ -1,3 +1,8 @@
+//variables-----------------------------------------------------------------------
+let answer_radio_index = 0;
+let draggin_obj;
+let draggin_parent;
+
 // collect a containers from template and remove teamplate from DOM---------------
 let answer_template = document.querySelector('.answer').cloneNode(true);
 document.querySelector('.answer').remove();
@@ -11,9 +16,8 @@ document.querySelector('.send').classList.add('hide');
 //collect data
 function collectData() {
     let data = [];
-    let quizs = document.querySelectorAll('.quiz');
     //quiz
-    for (quiz_el of quizs) {
+    for (quiz_el of document.querySelectorAll('.quiz')) {
         let quiz_questions = quiz_el.querySelectorAll('.question');
         let questins_arr = [];
         //questions
@@ -31,20 +35,15 @@ function collectData() {
                     });
                 }
             }
-            questins_arr.push([
-                {
-                    question_name:
-                        question_el.querySelector('.question_name').value,
-                },
-                answers_arr,
-            ]);
+            questins_obj = {};
+            questins_obj[question_el.querySelector('.question_name').value] =
+                answers_arr;
+            questins_arr.push([questins_obj]);
         }
-        data.push([
-            {
-                quiz_name: quiz_el.querySelector('input.form-control').value,
-            },
-            questins_arr,
-        ]);
+        quiz_obj = {};
+        quiz_obj[quiz_el.querySelector('input.form-control').value] =
+            questins_arr;
+        data.push([quiz_obj]);
     }
     return data;
 }
@@ -66,6 +65,18 @@ document.addEventListener('click', function (e) {
     } else if (e.target.classList.contains('addAnswer')) {
         //create answer
         let answer = answer_template.cloneNode(true);
+
+        answer_in_list = e.target.parentNode.querySelector('.answer');
+        //if question exist in list
+        if (answer_in_list) {
+            answer.querySelector('.form-check-input').name =
+                answer_in_list.querySelector('.form-check-input').name;
+        } else {
+            answer_radio_index += 1;
+            answer.querySelector('.form-check-input').name +=
+                answer_radio_index.toString();
+        }
+
         e.target.parentNode.append(answer);
     } else if (e.target.classList.contains('btn-close')) {
         // Remove element button
@@ -79,6 +90,54 @@ document.addEventListener('click', function (e) {
     } else if (e.target.classList.contains('send')) {
         // collect and send data
         let collected_data = collectData();
+        console.log(JSON.stringify(collected_data));
         console.log(collected_data);
     }
 });
+
+document.addEventListener('dragstart', function (e) {
+    e.target.classList.add('dragging');
+    draggin_obj = e.target.cloneNode(true);
+    draggin_parent = e.target.parentNode;
+});
+
+document.addEventListener('dragend', function (e) {
+    e.target.classList.remove('dragging');
+    // if (e.target != draggin_parent) {
+        // console.log(draggin_parent.contains(e.target));
+        // console.log(e.target)
+    // }
+});
+document.addEventListener('dragleave', function (e) {
+    // if (e.target != draggin_parent) {
+        // console.log(draggin_parent.contains(e.target));
+        // console.log(e.target);
+    // }
+});
+document.addEventListener('dragover', function (e) {
+    // if (e.target != draggin_parent) {
+    // console.log(draggin_parent.contains(e.target));
+    console.log(e.target)
+    // }
+});
+//validators----------------------------------------------------------------------
+function check_empty_quiz() {
+    let flag_is_empty = false;
+    for (quiz_el of document.querySelectorAll('.quiz')) {
+        if (length(quiz_el.querySelector('.quiz_name').value) < 1) {
+            flag_is_empty = true;
+        }
+    }
+    return flag_is_empty;
+}
+
+function check_empty_question(elem) {
+    let flag_is_empty = false;
+    for (question_el of elem.querySelectorAll('.card.question')) {
+        if (length(question_el.querySelector('.question_name').value) < 1) {
+            flag_is_empty = true;
+        }
+    }
+    return flag_is_empty;
+}
+
